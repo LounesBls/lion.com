@@ -290,7 +290,7 @@ center {
     justify-content: space-around;
     align-items: flex-end;
     gap: 20px;
-    height: 200px;
+    /* height: 200px; */
 }
 
 .col .serve {
@@ -303,16 +303,19 @@ center {
     color: var(--MainColor);
 }
 
-.col .serve .p {
-    line-height: 1.3;
-    font-size: 15px;
-    width: 250px;
+.col .serve p {
+    line-height: 1.7;
+    font-size: 1em;
+    /* width: 250px; */
+    color: #777;
 }
 
 .services-content .serve .text {
     padding-left: 15px;
     padding-bottom: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 3em;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 /* X-small  */
@@ -332,22 +335,29 @@ center {
 /* grapph drow */
 .services-content .graph {
     position: relative;
+    display: none;
 }
 
-.graph .gray {
-    width: 225px;
-    height: 225px;
-    background-color: #f6f6f6;
+.graph img {
+
+    width: 15em;
+    height: 21em;
 }
 
 .graph .darkblue {
-    height: 310px;
-    width: 80px;
+    height: 27em;
+    width: 6em;
     background-color: var(--TextColor);
     position: absolute;
-    top: -42px;
-    z-index: -1;
-    right: -32px;
+    z-index: -2;
+    top: -3em;
+    right: -3em;
+}
+
+@media (min-width: 1198.3px) {
+    .services-content .graph {
+        display: block;
+    }
 }
 
 /* end graph drow */
