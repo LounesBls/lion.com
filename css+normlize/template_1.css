@@ -290,7 +290,6 @@ center {
     justify-content: space-around;
     align-items: flex-end;
     gap: 20px;
-    /* height: 200px; */
 }
 
 .col .serve {
@@ -306,7 +305,6 @@ center {
 .col .serve p {
     line-height: 1.7;
     font-size: 1em;
-    /* width: 250px; */
     color: #777;
 }
 
@@ -316,6 +314,12 @@ center {
     margin-bottom: 3em;
     padding-top: 0;
     margin-top: 0;
+}
+
+.services-content .serve .text h3 {
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-bottom: 1.2em;
 }
 
 /* X-small  */
@@ -328,7 +332,6 @@ center {
         margin-top: 30px;
     }
 }
-
 
 /* end services */
 
@@ -362,7 +365,6 @@ center {
 
 /* end graph drow */
 
-
 /* start portfolio */
 .portfolio {
     width: 100%;
@@ -382,6 +384,24 @@ center {
 .row .col-1 .img {
     height: 19em;
     background-color: #f6f6f6;
+    background-size: cover;
+}
+
+.i-one {
+    background-image: url(../images/portfolio-1.jpg);
+}
+
+.i-two {
+    background-image: url(../images/portfolio-2.jpg);
+}
+
+.i-three {
+    background-image: url(../images/portfolio-3.jpg);
+}
+
+.i-four {
+    background-size: cover;
+    background-image: url(../images/about.jpg)
 }
 
 .row .col-1 h4 {
@@ -405,7 +425,6 @@ center {
 @media (max-width: 576px) {
     .portfolio .container>h2 {
         font-size: 60px;
-
     }
 
     .portfolio .container>h2+p {
@@ -415,47 +434,8 @@ center {
     }
 }
 
-
-/* custom {for graph}*/
-@media (min-width: 250px)and (max-width: 300px) {
-    .portfolio {
-        margin-top: 51em;
-    }
-}
-
-@media (min-width: 300px)and (max-width: 350px) {
-    .portfolio {
-        margin-top: 48.2em;
-    }
-}
-
-@media (min-width: 350px)and (max-width: 420px) {
-    .portfolio {
-        margin-top: 40em;
-    }
-}
-
-@media (min-width: 421px)and (max-width: 650px) {
-    .portfolio {
-        margin-top: 35em;
-    }
-}
-
-@media (min-width: 651px)and (max-width: 767px) {
-    .portfolio {
-        margin-top: 29em;
-    }
-}
-
-/* small */
-@media (min-width: 768px) {
-    .portfolio {
-        margin-top: 27em;
-    }
-}
-
 /* medium */
-@media (min-width: 992px) {
+@media (min-width: 1198px) {
     .portfolio {
         margin-top: 2em;
     }
@@ -467,10 +447,10 @@ center {
 .about {
     padding: 60px 0;
     background-color: #fff;
+    margin-bottom: 2em;
 }
 
 .about .container .aboutContent {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -479,33 +459,37 @@ center {
 }
 
 .about .row {
-    gap: 10em;
+    gap: 7.6em
 }
 
 .about .row .graph-2 {
     position: relative;
+    width: 244px;
+    height: 336px;
 }
 
 .about .row .graph-2>div:first-child {
     width: 5em;
-    height: 20em;
+    height: 27em;
     background-color: #eeeeee47;
+    position: relative;
+    bottom: 2em;
 }
 
 .about .row .graph-2 div:nth-child(2) {
     width: 4em;
-    height: 12.5em;
+    height: 22em;
     background-color: var(--MainColor);
     position: absolute;
     left: 15em;
-    top: 1.8em;
+    bottom: 0.7em;
 }
 
 .about .row .graph-2 div:nth-child(2)::after {
     content: "";
     display: block;
     width: 8em;
-    height: 3em;
+    height: 4.5em;
     background-color: var(--MainColor);
     position: absolute;
     bottom: 0;
@@ -513,13 +497,36 @@ center {
 
 .about .row .graph-2 div:last-child {
     width: 14em;
-    height: 14em;
+    height: 21em;
     background-color: #eee;
     position: absolute;
     left: 3em;
-    top: 3em;
+    top: 1em;
     box-shadow: 0 0 10px #888888ab;
 }
+
+/* Costume graph design */
+@media (max-width: 992px) {
+
+    .about .row .graph-2>div:first-child,
+    .about .row .graph-2 div:nth-child(2),
+    .about .row .graph-2 div:nth-child(2)::after {
+        display: none;
+    }
+
+    .about .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .about .row .text {
+        text-align: center;
+    }
+}
+
 
 .about .row .text p:first-child {
     font-weight: 800;
@@ -542,95 +549,10 @@ center {
     line-height: 1.6;
 }
 
-/* X-small  */
-@media (min-width: 300px) and (max-width: 420px) {
-    .about .row {
-        gap: 2em;
-    }
-
-    .about .row .text p {
-        font-size: 18px;
-    }
-
-    .about .row .text p:first-child {
-        font-weight: 600;
-    }
-
-    .about .row .graph-2 {
-        margin-left: 0;
-        position: relative;
-    }
-
-    .about .row .graph-2 div:first-child {
-        width: 3em;
-        height: 15em;
-        background-color: #eeeeee47;
-    }
-
-    .about .row .graph-2 div:nth-child(2) {
-        width: 3em;
-        height: 8.5em;
-        background-color: var(--MainColor);
-        position: absolute;
-        left: 8em;
-        top: 1.8em;
-    }
-
-    .about .row .graph-2 div:nth-child(2)::after {
-        content: "";
-        display: block;
-        width: 5em;
-        height: 2em;
-        background-color: var(--MainColor);
-        position: absolute;
-        bottom: 0;
-    }
-
-    .about .row .graph-2 div:last-child {
-        width: 9em;
-        height: 9em;
-        background-color: #eee;
-        position: absolute;
-        left: 1em;
-        top: 3em;
-        box-shadow: 0 0 10px #888888ab;
-    }
-}
-
-@media (min-width: 420px) and (max-width: 767px) {
-    .about .row {
-        gap: 4em;
-    }
-}
-
-/* small  */
-@media (min-width: 768px) {
-    .about .row {
-        gap: 7em;
-    }
-
-    .about .row .graph-2 {
-        position: relative;
-    }
-}
-
-
-/* medium */
-@media (min-width: 992px) {
-    .about .row {
-        gap: 10em;
-    }
-}
-
 /* large */
 @media (min-width: 1200px) {
     .about .row {
         gap: 8em;
-    }
-
-    .about .row .graph-2 {
-        margin-left: 3em;
-        padding: 0 1em;
     }
 }
 
