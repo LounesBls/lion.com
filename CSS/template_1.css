@@ -234,6 +234,7 @@ center {
 
 .features .feat i {
     color: var(--MainColor);
+    /* font-size: 50px; */
 }
 
 .features .feat h3 {
