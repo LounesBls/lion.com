@@ -114,7 +114,8 @@ center {
 .header .links .icon span {
     background-color: #333;
     margin-bottom: 5px;
-    height: 1.5px;
+    height: 3px;
+    border-radius: 5px;
 }
 
 .header .links .icon span:first-child {
@@ -205,6 +206,13 @@ center {
     font-size: 50px;
     width: 320px;
     max-width: 100%;
+
+}
+
+.lean {
+    color: var(--MainColor);
+    text-transform: capitalize;
+    font-weight: 700;
 }
 
 .intro-text p {
@@ -289,7 +297,7 @@ center {
 .services-content {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 20px;
 }
 
