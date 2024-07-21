@@ -296,8 +296,8 @@ center {
 /* start services */
 .services-content {
     display: flex;
-    justify-content: space-around;
     align-items: flex-start;
+    justify-content: space-around;
     gap: 20px;
 }
 
